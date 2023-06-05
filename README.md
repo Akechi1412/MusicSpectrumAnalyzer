@@ -14,10 +14,10 @@
 
 ### Hardware
 - Schematic
-![alt text](/Hardware/Sheet1.pdf)
+![alt text](./Hardware/Sheet1.pdf)
 - PCB top layer
-![alt text](/Hardware/PCB1_toplayer.pdf)
+![alt text](./Hardware/PCB1_toplayer.pdf)
 - PCB bottom layer
-![alt text](/Hardware/PCB1_bottomlayer.pdf)
+![alt text](./Hardware/PCB1_bottomlayer.pdf)
 - Actual PCB
-![alt text](/Hardware/ActualPCBj.jpg)
+![alt text](./Hardware/ActualPCBj.jpg)
