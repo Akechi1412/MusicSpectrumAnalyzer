@@ -1,0 +1,14 @@
+Change Component Footprint: Designator=U1 Old Footprint=TO220-123 New Footprint=TO220H3
+Added Member To Class: ClassName=Sheet1 Member=Component R1 82R
+Added Member To Class: ClassName=Sheet1 Member=Component R3 330R
+Added Member To Class: ClassName=Sheet1 Member=Component R12 82R
+Added Member To Class: ClassName=Sheet1 Member=Component R13 82R
+Added Member To Class: ClassName=Sheet1 Member=Component R18 470R
+Added Member To Class: ClassName=Sheet1 Member=Component R19 470R
+Added Member To Class: ClassName=Sheet1 Member=Component R26 82R
+Added Member To Class: ClassName=Sheet1 Member=Component R27 82R
+Added Member To Class: ClassName=Sheet1 Member=Component R32 470R
+Added Member To Class: ClassName=Sheet1 Member=Component R33 470R
+Added Member To Class: ClassName=Sheet1 Member=Component U3 74HC595
+Added Member To Class: ClassName=Sheet1 Member=Component U4 74HC595
+Added Room: Name=Sheet1

@@ -1,0 +1,4 @@
+Change Component Footprint: Designator=U3 Old Footprint=DIP-20 New Footprint=DIP20
+Change Component Footprint: Designator=U6 Old Footprint=DIP-20 New Footprint=DIP20
+Change Component Footprint: Designator=U8 Old Footprint=DIP-20 New Footprint=DIP20
+Added Room: Name=Sheet1

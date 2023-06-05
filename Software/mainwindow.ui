@@ -1,0 +1,1156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>630</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>1</horstretch>
+    <verstretch>1</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>630</width>
+    <height>650</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>630</width>
+    <height>650</height>
+   </size>
+  </property>
+  <property name="acceptDrops">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>MSpezer</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="MusicSpectrumAnalyzer1/resource.qrc">
+    <normaloff>:/images/equalizer.png</normaloff>:/images/equalizer.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QProgressBar {
+	background-color: transparent;
+	border: 0px solid grey;
+}
+QProgressBar::chunk {
+	background-color: rgb(30,129,176);
+	height: 40px;
+	margin: 0px;
+	margin-top: 5px;		
+	border-radius: 4px
+}
+QToolButton {
+	background-color: transparent;
+}
+
+QStatusBar {
+	margin-top: 10px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>587</width>
+      <height>529</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QProgressBar" name="progressBar_Spectrum1">
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>360</height>
+          </size>
+         </property>
+         <property name="maximum">
+          <number>8</number>
+         </property>
+         <property name="value">
+          <number>1</number>
+         </property>
+         <property name="textVisible">
+          <bool>false</bool>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="format">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="progressBar_Spectrum2">
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>360</height>
+          </size>
+         </property>
+         <property name="maximum">
+          <number>8</number>
+         </property>
+         <property name="value">
+          <number>2</number>
+         </property>
+         <property name="textVisible">
+          <bool>false</bool>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="format">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="progressBar_Spectrum3">
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>360</height>
+          </size>
+         </property>
+         <property name="maximum">
+          <number>8</number>
+         </property>
+         <property name="value">
+          <number>3</number>
+         </property>
+         <property name="textVisible">
+          <bool>false</bool>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="format">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="progressBar_Spectrum4">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+           <horstretch>1</horstretch>
+           <verstretch>1</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>360</height>
+          </size>
+         </property>
+         <property name="maximum">
+          <number>8</number>
+         </property>
+         <property name="value">
+          <number>4</number>
+         </property>
+         <property name="textVisible">
+          <bool>false</bool>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="format">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="progressBar_Spectrum5">
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>360</height>
+          </size>
+         </property>
+         <property name="maximum">
+          <number>8</number>
+         </property>
+         <property name="value">
+          <number>5</number>
+         </property>
+         <property name="textVisible">
+          <bool>false</bool>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="format">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="progressBar_Spectrum6">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>360</height>
+          </size>
+         </property>
+         <property name="maximum">
+          <number>8</number>
+         </property>
+         <property name="value">
+          <number>6</number>
+         </property>
+         <property name="textVisible">
+          <bool>false</bool>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="format">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="progressBar_Spectrum7">
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>360</height>
+          </size>
+         </property>
+         <property name="maximum">
+          <number>8</number>
+         </property>
+         <property name="value">
+          <number>7</number>
+         </property>
+         <property name="textVisible">
+          <bool>false</bool>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="format">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="progressBar_Spectrum8">
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>360</height>
+          </size>
+         </property>
+         <property name="maximum">
+          <number>8</number>
+         </property>
+         <property name="value">
+          <number>8</number>
+         </property>
+         <property name="textVisible">
+          <bool>false</bool>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="format">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_Hz_labels">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_Spectrum1">
+          <property name="text">
+           <string>      31Hz</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_Spectrum2">
+          <property name="text">
+           <string>      73Hz</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_Spectrum3">
+          <property name="text">
+           <string>    173Hz</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_Spectrum4">
+          <property name="text">
+           <string>     411Hz</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_Spectrum5">
+          <property name="text">
+           <string>    974Hz</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_Spectrum6">
+          <property name="text">
+           <string>   2.3kHz</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_Spectrum7">
+          <property name="text">
+           <string>    5.5kHz</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_Spectrum8">
+          <property name="text">
+           <string>   13kHz</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>13</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="labelPosition">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>00:00</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSlider" name="horizontalSliderPlayer">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider {
+	margin: 8px;
+}
+QSlider::groove:horizontal {
+	border-radius: 5px;
+	height: 10px;
+	margin: 0px;
+	background-color: rgb(190,190,190);
+}
+QSlider::handle:horizontal {
+	border: 5px solid transparent;
+	width: 6px;
+	height: 6px;
+	border-radius: 8px;
+	background-color: rgb(2,2,2);
+	margin: -3px;
+}
+QSlider::handle:horizontal:hover {
+	border: none;
+	width: 16px;
+	height: 16px;
+	border-radius: 8px;
+}
+QSlider::handle:horizontal:pressed {
+	border: 5px solid white;
+	width: 6px;
+	height: 6px;
+	border-radius: 8px;
+}</string>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelDuration">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>00:00</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QToolButton" name="toolButtonPlay">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Play&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QToolButton {
+	background-color: rgb(204,204,204);
+	padding: 10px;
+	border-radius: 6px;
+}</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset resource="MusicSpectrumAnalyzer1/resource.qrc">
+           <normaloff>:/images/play.png</normaloff>:/images/play.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="toolButtonPause">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pause&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QToolButton {
+	background-color: rgb(204,204,204);
+	padding: 10px;
+	border-radius: 6px;
+}</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset resource="MusicSpectrumAnalyzer1/resource.qrc">
+           <normaloff>:/images/pause.png</normaloff>:/images/pause.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="toolButtonStop">
+         <property name="baseSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Stop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QToolButton {
+	background-color: rgb(204,204,204);
+	padding: 10px;
+	border-radius: 6px;
+}</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset resource="MusicSpectrumAnalyzer1/resource.qrc">
+           <normaloff>:/images/stop.png</normaloff>:/images/stop.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>298</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QToolButton" name="toolButtonVolume">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="toolTip">
+          <string>Volume</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset resource="MusicSpectrumAnalyzer1/resource.qrc">
+           <normaloff>:/images/medium-volume.png</normaloff>:/images/medium-volume.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>28</width>
+           <height>28</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSlider" name="horizontalSliderVolume">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider {
+	margin: 5px;
+}
+QSlider::groove:horizontal {
+	border-radius: 3px;
+	height: 6px;
+	margin: 0px;
+	background-color: rgb(190,190,190);
+}
+QSlider::handle:horizontal {
+	background-color: rgb(2,2,2);
+	margin: -3px;
+	border: none;
+	width: 12px;
+	height: 12px;
+	border-radius: 6px;
+}
+QSlider::handle:horizontal:pressed {
+	border: 4px solid white;
+	width: 4px;
+	height: 4px;
+	border-radius: 6px;
+}</string>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>630</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen_Music"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <widget class="QMenu" name="menuMode">
+     <property name="title">
+      <string>Mode</string>
+     </property>
+     <property name="icon">
+      <iconset resource="MusicSpectrumAnalyzer1/resource.qrc">
+       <normaloff>:/images/mode.png</normaloff>:/images/mode.png</iconset>
+     </property>
+     <addaction name="actionMode_1"/>
+     <addaction name="actionMode_2"/>
+     <addaction name="actionMode_3"/>
+     <addaction name="actionMode_4"/>
+     <addaction name="actionMode_5"/>
+    </widget>
+    <widget class="QMenu" name="menuColor">
+     <property name="title">
+      <string>Color</string>
+     </property>
+     <addaction name="actionPrimaryColor"/>
+     <addaction name="actionSecondaryColor"/>
+     <addaction name="actionTertiaryColor"/>
+    </widget>
+    <addaction name="menuMode"/>
+    <addaction name="menuColor"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+    <addaction name="actionHelp"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <widget class="QMenu" name="menuPort">
+     <property name="title">
+      <string>Port</string>
+     </property>
+     <property name="icon">
+      <iconset resource="MusicSpectrumAnalyzer1/resource.qrc">
+       <normaloff>:/images/usb-port.png</normaloff>:/images/usb-port.png</iconset>
+     </property>
+     <addaction name="actionAvailablePort"/>
+     <addaction name="action_COM1"/>
+     <addaction name="action_COM2"/>
+     <addaction name="action_COM3"/>
+     <addaction name="action_COM4"/>
+     <addaction name="action_COM5"/>
+     <addaction name="action_COM6"/>
+     <addaction name="action_COM7"/>
+     <addaction name="action_COM8"/>
+     <addaction name="action_COM9"/>
+     <addaction name="action_COM10"/>
+     <addaction name="action_COM11"/>
+     <addaction name="action_COM12"/>
+     <addaction name="action_COM13"/>
+     <addaction name="action_COM14"/>
+     <addaction name="action_COM15"/>
+     <addaction name="action_COM16"/>
+     <addaction name="action_COM17"/>
+     <addaction name="action_COM18"/>
+     <addaction name="action_COM19"/>
+     <addaction name="action_COM20"/>
+     <addaction name="action_COM21"/>
+     <addaction name="action_COM22"/>
+     <addaction name="action_COM23"/>
+     <addaction name="action_COM24"/>
+     <addaction name="action_COM25"/>
+     <addaction name="action_COM26"/>
+     <addaction name="action_COM27"/>
+     <addaction name="action_COM28"/>
+    </widget>
+    <addaction name="actionConnect"/>
+    <addaction name="menuPort"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen_Music"/>
+   <addaction name="actionConnect"/>
+   <addaction name="separator"/>
+   <addaction name="actionHelp"/>
+   <addaction name="separator"/>
+   <addaction name="actionQuit"/>
+  </widget>
+  <action name="actionOpen_Music">
+   <property name="icon">
+    <iconset resource="MusicSpectrumAnalyzer1/resource.qrc">
+     <normaloff>:/images/open-file.png</normaloff>:/images/open-file.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open Music</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="MusicSpectrumAnalyzer1/resource.qrc">
+     <normaloff>:/images/about.png</normaloff>:/images/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="icon">
+    <iconset resource="MusicSpectrumAnalyzer1/resource.qrc">
+     <normaloff>:/images/help.png</normaloff>:/images/help.png</iconset>
+   </property>
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="icon">
+    <iconset theme="accessories-calculator" resource="MusicSpectrumAnalyzer1/resource.qrc">
+     <normaloff>:/images/quit.png</normaloff>:/images/quit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionConnect">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MusicSpectrumAnalyzer1/resource.qrc">
+     <normaloff>:/images/connect.png</normaloff>:/images/connect.png</iconset>
+   </property>
+   <property name="text">
+    <string>Connect</string>
+   </property>
+  </action>
+  <action name="actionAvailablePort">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Avaiable Port</string>
+   </property>
+  </action>
+  <action name="actionCOM2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM1</string>
+   </property>
+  </action>
+  <action name="actionCOM3">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM2</string>
+   </property>
+  </action>
+  <action name="actionCOM4">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM3</string>
+   </property>
+  </action>
+  <action name="actionCOM5">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM4</string>
+   </property>
+  </action>
+  <action name="actionCOM6">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM4</string>
+   </property>
+  </action>
+  <action name="actionCOM7">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM5</string>
+   </property>
+  </action>
+  <action name="actionCOM8">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM8</string>
+   </property>
+  </action>
+  <action name="actionCOM9">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM9</string>
+   </property>
+  </action>
+  <action name="actionCOM10">
+   <property name="text">
+    <string>COM10</string>
+   </property>
+  </action>
+  <action name="actionMode_1">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Mode 1</string>
+   </property>
+  </action>
+  <action name="actionMode_2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Mode 2</string>
+   </property>
+  </action>
+  <action name="actionMode_3">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Mode 3</string>
+   </property>
+  </action>
+  <action name="actionMode_4">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Mode 4</string>
+   </property>
+  </action>
+  <action name="actionMode_5">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Mode 5</string>
+   </property>
+  </action>
+  <action name="actionAvailable_Port">
+   <property name="text">
+    <string>Available Port</string>
+   </property>
+  </action>
+  <action name="action_COM1">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM1</string>
+   </property>
+  </action>
+  <action name="action_COM2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM2</string>
+   </property>
+  </action>
+  <action name="action_COM3">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM3</string>
+   </property>
+  </action>
+  <action name="action_COM4">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM4</string>
+   </property>
+  </action>
+  <action name="action_COM5">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM5</string>
+   </property>
+  </action>
+  <action name="action_COM6">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM6</string>
+   </property>
+  </action>
+  <action name="action_COM7">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM7</string>
+   </property>
+  </action>
+  <action name="action_COM8">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM8</string>
+   </property>
+  </action>
+  <action name="action_COM9">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM9</string>
+   </property>
+  </action>
+  <action name="action_COM10">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM10</string>
+   </property>
+  </action>
+  <action name="action_COM11">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM11</string>
+   </property>
+  </action>
+  <action name="action_COM12">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM12</string>
+   </property>
+  </action>
+  <action name="action_COM13">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM13</string>
+   </property>
+  </action>
+  <action name="action_COM14">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM14</string>
+   </property>
+  </action>
+  <action name="action_COM15">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM15</string>
+   </property>
+  </action>
+  <action name="action_COM16">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM16</string>
+   </property>
+  </action>
+  <action name="action_COM17">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM17</string>
+   </property>
+  </action>
+  <action name="action_COM18">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM18</string>
+   </property>
+  </action>
+  <action name="action_COM19">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM19</string>
+   </property>
+  </action>
+  <action name="action_COM20">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM20</string>
+   </property>
+  </action>
+  <action name="action_COM21">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM21</string>
+   </property>
+  </action>
+  <action name="action_COM22">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM22</string>
+   </property>
+  </action>
+  <action name="action_COM23">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM23</string>
+   </property>
+  </action>
+  <action name="action_COM24">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM24</string>
+   </property>
+  </action>
+  <action name="action_COM25">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM25</string>
+   </property>
+  </action>
+  <action name="action_COM26">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM26</string>
+   </property>
+  </action>
+  <action name="action_COM27">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM27</string>
+   </property>
+  </action>
+  <action name="action_COM28">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM28</string>
+   </property>
+  </action>
+  <action name="actionPrimaryColor">
+   <property name="text">
+    <string>Primary Color</string>
+   </property>
+  </action>
+  <action name="actionSecondaryColor">
+   <property name="text">
+    <string>Secondary Color</string>
+   </property>
+  </action>
+  <action name="actionTertiaryColor">
+   <property name="text">
+    <string>Tertiary Color</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="MusicSpectrumAnalyzer1/resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=Rw5 Pin=KIT1-13
+Removed Pin From Net: NetName=Rw6 Pin=KIT1-14
+Removed Pin From Net: NetName=Rw7 Pin=KIT1-15
+Removed Pin From Net: NetName=Rw8 Pin=KIT1-16
+Added Pin To Net: NetName=Rw8 Pin=KIT1-13
+Added Pin To Net: NetName=Rw7 Pin=KIT1-14
+Added Pin To Net: NetName=Rw6 Pin=KIT1-15
+Added Pin To Net: NetName=Rw5 Pin=KIT1-16
