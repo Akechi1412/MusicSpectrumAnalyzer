@@ -1,5 +1,5 @@
 # Music Spectrum Analyzer
-> RGB LED Matrix Music Spectrum Analyzer 
+> RGB LED Matrix Music Spectrum Analyzer. 
 > This is a project to build a computer application that can play music and analyze the spectrum. Information about the frequency spectrum will be transmitted to the microcontroller through the serial port. Based on this data, the microcontroller will control the LEDs in various modes and different colors.
 ## Construct
 ### Software
